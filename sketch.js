@@ -1,4 +1,5 @@
 function setup() {
+  j = createElement()
   createCanvas(4000,1000)
   background(200)
   a = createElement("h1", "Enter your cookie clicker save code here:")
@@ -9,7 +10,7 @@ function setup() {
   c.position(0,150)
   c.mousePressed(hi)
   c2 = createButton("Hack in all the acheivements!")
-  c2.position(100, 150)
+  c2.position(200, 150)
   c2.mousePressed(bee)
 }
 
@@ -30,8 +31,12 @@ function bee() {
   e = atob(d[0])
   f = e.split("|")
   console.log(f)
-  //i = btoa(h)
-  //element(i)
+  f[7] = ""
+  for (var i = 0; i != 643; i++) {
+    f[7] += "1"
+  }
+  g = join(f, "|")
+  element(btoa(g))
 }
 
 function element(asdasd) {
